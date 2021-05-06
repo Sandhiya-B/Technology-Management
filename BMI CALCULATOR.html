@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title> BMI Calculator </title>
+	</head>
+
+
+<style media="all">
+
+body
+		{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: sans-serif;
+			background-image: repeating-linear-gradient(20deg,#0984e3,#ff6b6b,#0984e3);
+			min-height: 100vh;
+		}
+
+
+		div
+		{
+			width: 600px;
+			position: relative;
+			left: 35%;
+			right: 50%;
+      background-color: #f7f1e3;
+			padding: 5px;
+			border-radius: 40px;
+			box-shadow: 1px 1px 20px #706fd3;
+		}
+		h2
+		{
+			font-size: 40px;
+			font-weight: 600;
+		}
+		.text
+		{
+			text-align: left;
+			margin-left: 150px;
+		}
+		#w, #h
+		{
+			color: #1e272e;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 200;
+			outline: none;
+			border: none;
+			background: none;
+			border-bottom: 1px solid #1e272e;
+			width: 200px;
+		}
+			#w:focus, #h:focus{
+				border-bottom: 2px solid #1e272e;
+				width: 300px;
+				transition: 0.5s;
+			}
+			#result
+			{
+				color: #b71540;
+			}
+			#btn
+			{
+				font-family: inherit;
+				margin-top: 10px;
+				border: none;
+				color: #fff;
+				background-image: linear-gradient(120deg,#6F1E51, #ED4C67);
+				width: 150px;
+				padding: 10px;
+				border-radius: 30px;
+				outline: none;
+				cursor: pointer;
+			}
+			#btn:hover
+			{
+				box-shadow: 1px 1px 10px ;
+			}
+			#info
+			{
+				font-size: 12px;
+				font-family: inherit;
+			}
+
+			table, th, td
+			{
+			border: 1px solid black;
+			width: 300px;
+			}
+
+
+</style>
+<script type="text/javascript">
+		function BMI() {
+			var h=document.getElementById('h').value;
+			var w=document.getElementById('w').value;
+			var bmi=w/(h/100*h/100);
+			var bmio=(bmi.toFixed(2));
+
+document.getElementById("result").innerHTML="Your BMI is " + bmio;
+
+
+		}
+</script>
+
+
+<body>
+<br>
+<br>
+
+
+<div>
+			<h2> BMI CALCULATOR </h2>
+			<b> <p class="text">Height in cm:</p> </b>
+			<input type="text" id="h">
+			<b> <p class="text">Weight in kg:</p> </b>
+			<input type="text" id="w">
+			<h2> <p id="result"></p> </h2>
+			<button id="btn" onClick="BMI()"> CALCULATE </button>
+			<br>
+			<br>
+			<br>
+
+</div>
+
+
+<br>
+<br>
+
+
+<div>
+
+		<h2> VALUE RANGE </h2>
+
+
+		<p><h4> Compare the result with the below range to know your BMI.</h4> </p>
+<center>
+		<table style="width:90%">
+
+		<tr>
+		<th> VALUE RANGE </th>
+		<th>BMI</th>
+		</tr>
+
+		<tr>
+		<td>Below    18.5</td>
+		<td>Under Weight</td>
+		</tr>
+
+		<tr>
+		<td>18.5 to 24.9	</td>
+		<td>Healthy Weight </td>
+		</tr>
+
+		<tr>
+		<td>25.0  to  29.9	</td>
+		<td>Overweight</td>
+		</tr>
+
+		<tr>
+		<td>30.0 and Above</td>
+		<td>Obese</td>
+		</tr>
+
+
+</table>
+</center>
+
+
+
+		<br>
+		<br>
+		<br>
+
+		<p> <center> <b> <em> P.S - You Are Beautiful No Matter What Your BMI Is. Keep Going :)  </em>  </b> </center> </p>
+
+		<br>
+		<br>
+
+		</div>
+
+
+</body>
+</html>
